@@ -1,0 +1,201 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:680XX-CPU-BJH
+LIBS:4000series-BJH
+LIBS:AMIGA-Custom-Chipset
+LIBS:Basics-BJH
+LIBS:buzzer
+LIBS:Connectors-BJH
+LIBS:Devices-BJH
+LIBS:LCD-BJH
+LIBS:Microchip-BJH
+LIBS:Modules-BJH
+LIBS:OpAmps-BJH
+LIBS:Opto-BJH
+LIBS:Oscillators-BJH
+LIBS:PowerSymbols-BJH
+LIBS:Relays
+LIBS:Transistors-BJH
+LIBS:Regulators-BJH
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "IRLED1"
+Date ""
+Rev ""
+Comp "Hoskins.Tech"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 78M33 U?
+U 1 1 58D9622D
+P 1350 1500
+F 0 "U?" H 1050 1800 60  0000 C CNN
+F 1 "78M33" V 1100 1500 60  0000 C CNN
+F 2 "" H 1350 1500 60  0000 C CNN
+F 3 "" H 1350 1500 60  0000 C CNN
+	1    1350 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L RT8471_BJH U?
+U 1 1 58D962BA
+P 5000 4100
+F 0 "U?" H 4750 4650 60  0000 L CNN
+F 1 "RT8471_BJH" H 4750 3550 60  0001 L CNN
+F 2 "" H 4550 4450 60  0000 C CNN
+F 3 "" H 4550 4450 60  0000 C CNN
+F 4 "RT8471" H 4850 4100 60  0000 L CNN "Device"
+	1    5000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L RT8471_BJH U?
+U 2 1 58D96302
+P 2600 1500
+F 0 "U?" H 2350 2050 60  0000 L CNN
+F 1 "RT8471_BJH" H 2350 950 60  0001 L CNN
+F 2 "" H 2150 1850 60  0000 C CNN
+F 3 "" H 2150 1850 60  0000 C CNN
+F 4 "RT8471" H 2450 1500 60  0000 L CNN "Device"
+	2    2600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky_Small D?
+U 1 1 58D96443
+P 6050 4050
+F 0 "D?" H 6000 4130 50  0000 L CNN
+F 1 "B240A" H 5770 3970 50  0000 L CNN
+F 2 "" V 6050 4050 50  0000 C CNN
+F 3 "" V 6050 4050 50  0000 C CNN
+	1    6050 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L L_Small L?
+U 1 1 58D96507
+P 5600 4250
+F 0 "L?" H 5630 4290 50  0000 L CNN
+F 1 "33uH" H 5630 4210 50  0000 L CNN
+F 2 "" H 5600 4250 50  0000 C CNN
+F 3 "" H 5600 4250 50  0000 C CNN
+	1    5600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Led_Small D?
+U 1 1 58D9657F
+P 5600 3950
+F 0 "D?" H 5550 4075 50  0000 L CNN
+F 1 "LD4" H 5550 3850 50  0000 L CNN
+F 2 "" V 5600 3950 50  0000 C CNN
+F 3 "" V 5600 3950 50  0000 C CNN
+	1    5600 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58D965CE
+P 5600 3450
+F 0 "R?" V 5680 3450 50  0000 C CNN
+F 1 "0.1" V 5600 3450 50  0000 C CNN
+F 2 "" V 5530 3450 50  0000 C CNN
+F 3 "" H 5600 3450 50  0000 C CNN
+	1    5600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 58D966CC
+P 5800 3950
+F 0 "C?" H 5810 4020 50  0000 L CNN
+F 1 "1uF" H 5810 3870 50  0000 L CNN
+F 2 "" H 5800 3950 50  0000 C CNN
+F 3 "" H 5800 3950 50  0000 C CNN
+	1    5800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3750 5800 3750
+Wire Wire Line
+	5600 4350 5600 4450
+Wire Wire Line
+	5400 4450 6050 4450
+Wire Wire Line
+	5800 4050 5800 4100
+Wire Wire Line
+	5600 3600 5600 3850
+Wire Wire Line
+	5600 4050 5600 4150
+Wire Wire Line
+	5800 4100 5600 4100
+Connection ~ 5600 4100
+Wire Wire Line
+	5800 3750 5800 3850
+Connection ~ 5600 3750
+Wire Wire Line
+	6050 3950 6050 3150
+Wire Wire Line
+	6050 3150 5600 3150
+Wire Wire Line
+	5600 3150 5600 3300
+Wire Wire Line
+	6050 4450 6050 4150
+Connection ~ 5600 4450
+$Comp
+L PIC-12F1822 U?
+U 1 1 58D96A67
+P 2400 3450
+F 0 "U?" H 1950 3750 60  0000 C CNN
+F 1 "PIC-12F1822" H 1900 3050 60  0000 L CNN
+F 2 "" H 2000 1550 60  0000 C CNN
+F 3 "" H 2000 1550 60  0000 C CNN
+	1    2400 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L PIC-12F1822 U?
+U 2 1 58D96ACE
+P 3600 1500
+F 0 "U?" H 3150 1800 60  0000 C CNN
+F 1 "PIC-12F1822" H 3100 1100 60  0000 L CNN
+F 2 "" H 3200 -400 60  0000 C CNN
+F 3 "" H 3200 -400 60  0000 C CNN
+	2    3600 1500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
