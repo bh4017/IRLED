@@ -1,4 +1,4 @@
-update=Mon 27 Mar 2017 19:53:31 BST
+update=Fri 14 Apr 2017 18:09:05 BST
 version=1
 last_client=kicad
 [pcbnew]
@@ -75,3 +75,13 @@ LibName43=PowerSymbols-BJH
 LibName44=Relays
 LibName45=Transistors-BJH
 LibName46=Regulators-BJH
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
