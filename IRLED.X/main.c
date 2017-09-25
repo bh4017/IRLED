@@ -54,19 +54,27 @@ void setup_hardware(void)
     CCP1CONbits.CCP1M=0x0C;     // Select PWM mode for CCP module
     CCP1CONbits.P1M=0x00;       // Select single output on CCP1 pin (RA5)
     PIR1bits.TMR2IF=0;          // Clear TMR2 interrupt flag
-    T2CONbits.T2CKPS=0x64;      // Select TMR2 prescalar as divide by 64 as per our example above
+    T2CONbits.T2CKPS= 3;        // Select TMR2 prescalar as divide by 64 as per our example above
     T2CONbits.TMR2ON=1;         // Turn TMR2 on
-    TRISAbits.TRISA2 = 0;       // Turn PWM output back on   
+    TRISAbits.TRISA5 = 0;       // Turn PWM output back on   
 }
 
 void main(void) 
 {
     DutyCycle = 0;
     setup_hardware();
-    for(int i = 0; i <= 1023; i+= 32)
+    while(DutyCycle <= 1022)
     {
-        set_pwm_duty_cycle(i);
-        __delay_ms(100);
+        set_pwm_duty_cycle(DutyCycle);
+        DutyCycle = DutyCycle + 2;
+        __delay_ms(10);
     }
+    
+    while(1);
+//    for(int i = 0; i <= 1023; i+= 32)
+//    {
+//        set_pwm_duty_cycle(i);
+//        __delay_ms(100);
+//    }
     return;
 }

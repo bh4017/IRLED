@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"3981 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic12f1822.h
+"3981 /opt/microchip/xc8/v1.42/include/pic12f1822.h
 [s S211 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S211 . CCP1M0 CCP1M1 CCP1M2 CCP1M3 DC1B0 DC1B1 P1M0 P1M1 ]
 "3991
@@ -112,14 +112,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _T2CONbits `VS59 ~T0 @X0 0 e@28 ]
 [p mainexit ]
 [v F2176 `(v ~T0 @X0 1 tf1`ul ]
-"152 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic.h
+"152 /opt/microchip/xc8/v1.42/include/pic.h
 [v __delay `JF2176 ~T0 @X0 0 e ]
 [p i __delay ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic12f1822.h: 50: extern volatile unsigned char INDF0 @ 0x000;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.43\include\pic12f1822.h
+"52 /opt/microchip/xc8/v1.42/include/pic12f1822.h
 [; ;pic12f1822.h: 52: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic12f1822.h: 55: typedef union {
@@ -2320,32 +2320,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 28: typedef signed short long int int24_t;
-[; ;stdint.h: 36: typedef signed long int int32_t;
-[; ;stdint.h: 43: typedef unsigned char uint8_t;
-[; ;stdint.h: 49: typedef unsigned int uint16_t;
-[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
-[; ;stdint.h: 63: typedef unsigned long int uint32_t;
-[; ;stdint.h: 71: typedef signed char int_least8_t;
-[; ;stdint.h: 78: typedef signed int int_least16_t;
-[; ;stdint.h: 90: typedef signed short long int int_least24_t;
-[; ;stdint.h: 98: typedef signed long int int_least32_t;
-[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
-[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 137: typedef signed char int_fast8_t;
-[; ;stdint.h: 144: typedef signed int int_fast16_t;
-[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
-[; ;stdint.h: 164: typedef signed long int int_fast32_t;
-[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
-[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 200: typedef int32_t intmax_t;
-[; ;stdint.h: 205: typedef uint32_t uintmax_t;
-[; ;stdint.h: 210: typedef int16_t intptr_t;
-[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;stdint.h: 38: typedef signed long int int32_t;
+[; ;stdint.h: 45: typedef unsigned char uint8_t;
+[; ;stdint.h: 51: typedef unsigned int uint16_t;
+[; ;stdint.h: 67: typedef unsigned long int uint32_t;
+[; ;stdint.h: 75: typedef signed char int_least8_t;
+[; ;stdint.h: 82: typedef signed int int_least16_t;
+[; ;stdint.h: 104: typedef signed long int int_least32_t;
+[; ;stdint.h: 111: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 117: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 136: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 145: typedef signed char int_fast8_t;
+[; ;stdint.h: 152: typedef signed int int_fast16_t;
+[; ;stdint.h: 174: typedef signed long int int_fast32_t;
+[; ;stdint.h: 181: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 187: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 206: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 212: typedef int32_t intmax_t;
+[; ;stdint.h: 217: typedef uint32_t uintmax_t;
+[; ;stdint.h: 222: typedef int16_t intptr_t;
+[; ;stdint.h: 227: typedef uint16_t uintptr_t;
 "12 main.c
 [p x FOSC=INTOSC ]
 [p x PLLEN=OFF ]
@@ -2455,15 +2449,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 56: PIR1bits.TMR2IF=0;
 "56
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 57: T2CONbits.T2CKPS=0x64;
+[; ;main.c: 57: T2CONbits.T2CKPS= 3;
 "57
-[e = . . _T2CONbits 1 0 -> -> 100 `i `uc ]
+[e = . . _T2CONbits 1 0 -> -> 3 `i `uc ]
 [; ;main.c: 58: T2CONbits.TMR2ON=1;
 "58
 [e = . . _T2CONbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 59: TRISAbits.TRISA2 = 0;
+[; ;main.c: 59: TRISAbits.TRISA5 = 0;
 "59
-[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
 [; ;main.c: 60: }
 "60
 [e :UE 275 ]
@@ -2483,36 +2477,39 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 65: setup_hardware();
 "65
 [e ( _setup_hardware ..  ]
-[; ;main.c: 66: for(int i = 0; i <= 1023; i+= 32)
+[; ;main.c: 66: while(DutyCycle <= 1022)
 "66
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ <= _i -> 1023 `i 277  ]
-[e $U 278  ]
-"67
-[e :U 277 ]
-[; ;main.c: 67: {
-{
-[; ;main.c: 68: set_pwm_duty_cycle(i);
-"68
-[e ( _set_pwm_duty_cycle (1 -> _i `ui ]
-[; ;main.c: 69: _delay((unsigned long)((100)*(16000000/4000.0)));
-"69
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"70
-}
-"66
-[e =+ _i -> 32 `i ]
-[e $ <= _i -> 1023 `i 277  ]
+[e $U 277  ]
 [e :U 278 ]
+[; ;main.c: 67: {
+"67
+{
+[; ;main.c: 68: set_pwm_duty_cycle(DutyCycle);
+"68
+[e ( _set_pwm_duty_cycle (1 _DutyCycle ]
+[; ;main.c: 69: DutyCycle = DutyCycle + 2;
+"69
+[e = _DutyCycle + _DutyCycle -> -> 2 `i `ui ]
+[; ;main.c: 70: _delay((unsigned long)((10)*(16000000/4000.0)));
 "70
-}
-[; ;main.c: 70: }
-[; ;main.c: 71: return;
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "71
+}
+[e :U 277 ]
+"66
+[e $ <= _DutyCycle -> -> 1022 `i `ui 278  ]
+[e :U 279 ]
+[; ;main.c: 71: }
+[; ;main.c: 73: while(1);
+"73
+[e :U 281 ]
+[e :U 280 ]
+[e $U 281  ]
+[e :U 282 ]
+[; ;main.c: 79: return;
+"79
 [e $UE 276  ]
-[; ;main.c: 72: }
-"72
+[; ;main.c: 80: }
+"80
 [e :UE 276 ]
 }
